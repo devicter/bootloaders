@@ -1,0 +1,55 @@
+menu.cpu=Processor
+
+
+######################################
+## devDuino 328 16 Mhz with OTA
+
+devDuino16.name=devDuino 328 16 Mhz with OTA
+
+devDuino16.upload.tool=arduino:avrdude
+devDuino16.upload.protocol=arduino
+devDuino16.upload.maximum_size=31744
+devDuino16.upload.speed=115200
+devDuino16.bootloader.tool=arduino:avrdude
+devDuino16.bootloader.low_fuses=0xDE
+devDuino16.bootloader.high_fuses=0xDC
+devDuino16.bootloader.extended_fuses=0xFD
+devDuino16.bootloader.path=DualOptiboot/DualOptiboot_V5.0_atmega328.hex
+devDuino16.bootloader.unlock_bits=0x3F
+devDuino16.bootloader.lock_bits=0xCF
+devDuino16.build.mcu=atmega328p
+devDuino16.build.f_cpu=16000000L
+devDuino16.build.core=arduino:arduino
+devDuino16.build.variant=arduino:standard
+devDuino16.build.board=AVR_MOTEINO
+
+######################################
+## devDuino devDuino 328 with OTA
+
+devDuino1_8.name=devDuino 328 1-8 Mhz with OTA
+
+devDuino1_8.upload.tool=arduino:avrdude
+devDuino1_8.upload.protocol=arduino
+devDuino1_8.upload.maximum_size=30720
+devDuino1_8.upload.maximum_data_size=2048
+devDuino1_8.upload.speed=57600
+
+devDuino1_8.bootloader.tool=arduino:avrdude
+devDuino1_8.bootloader.unlock_bits=0x3F
+devDuino1_8.bootloader.lock_bits=0x0F
+devDuino1_8.bootloader.low_fuses=0xE2
+devDuino1_8.bootloader.high_fuses=0xD2
+devDuino1_8.bootloader.extended_fuses=0x06
+devDuino1_8.bootloader.file=DualOptiboot/optiboot_atmega328_pro_8MHz.hex
+
+devDuino1_8.build.board=AVR_MICRO8
+devDuino1_8.build.core=arduino:arduino
+devDuino1_8.build.variant=micro
+devDuino1_8.build.mcu=atmega328p
+#devDuino1_8.build.f_cpu=8000000L
+
+devDuino1_8.menu.cpu.8Mhz=Atmega328 8 Mhz
+devDuino1_8.menu.cpu.8Mhz.build.f_cpu=8000000L 
+
+devDuino1_8.menu.cpu.1Mhz=Atmega328 1 Mhz 1.8 V
+devDuino1_8.menu.cpu.1Mhz.build.f_cpu=1000000L
